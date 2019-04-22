@@ -28,5 +28,5 @@ class Api::UsersController < ApplicationController
     @user.destroy
     render json: {message: 'User deleted'}
   end
-  
+
 end
