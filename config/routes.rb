@@ -18,6 +18,11 @@ Rails.application.routes.draw do
     get '/categories/:id' => 'categories#show'
     delete '/categories/:id' => 'categories#destroy'
 
+    get '/expenses' => 'expenses#index'
+    post '/expenses' => 'expenses#create'
+    get '/expenses/:id' => 'expenses#show'
+    delete '/expenses/:id' => 'expenses#destroy'
+
   end
 
 
