@@ -1,0 +1,1 @@
+json.partial! "categories.json.jbuilder", category: @category

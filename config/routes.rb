@@ -12,6 +12,12 @@ Rails.application.routes.draw do
     post '/users' => 'users#create'
     get '/users/:id' => 'users#show'
     delete '/users/:id' => 'users#destroy'
+
+    get '/categories' => 'categories#index'
+    post '/categories' => 'categories#create'
+    get '/categories/:id' => 'categories#show'
+    delete '/categories/:id' => 'categories#destroy'
+
   end
 
 
