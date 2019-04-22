@@ -6,4 +6,11 @@ Rails.application.routes.draw do
   # namespace :api do
   #   get "/photos" => "photos#index"
   # end
+
+  name space :api do
+    get '/users' => 'users#index'
+    
+  end
+
+
 end
