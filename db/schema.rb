@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_23_194611) do
+ActiveRecord::Schema.define(version: 2019_04_23_221602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2019_04_23_194611) do
     t.string "date"
     t.string "amount"
     t.string "notes"
-    t.string "expense_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category_id"
