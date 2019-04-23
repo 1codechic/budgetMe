@@ -25,6 +25,6 @@ class Api::CategoriesController < ApplicationController
     category_id = params[:id]
     @category = category.find_by(id: category_id)
     @category.destroy
-    render json: {message: 'User deleted'}
+    render json: {message: category deleted'}
   end
 end
