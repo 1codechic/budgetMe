@@ -21,8 +21,23 @@ class Api::ExpensesController < ApplicationController
   end
 
   def show
-    @expense = expense.find_by(id: params[:id])
+    @expense = Expense.find_by(id: params[:id])
     render 'show.json.jbuilder'
+  end
+
+  def update
+    @expense = Expense.find(params[:id])
+
+    @expense.name = params[:name] || @expense.name
+    @expense.date = params[:date] || @expense.date
+    @expense.amount = params[:amount] || @expense.amount
+    @expense.notes = params[:notes] || @expense.notes
+
+    if @expense.save
+      render 'show.json.jbuilder'
+    else
+      render json: {errors: @expense.errors.full_message}, status: :unprocessable_entity
+    end
   end
 
   def destroy

@@ -23,11 +23,10 @@ Rails.application.routes.draw do
     get '/budgets/:id' => 'budgets#show'
     delete '/budgets/:id' => 'budgets#destroy'
 
-
-
     get '/expenses' => 'expenses#index'
     post '/expenses' => 'expenses#create'
     get '/expenses/:id' => 'expenses#show'
+    patch '/expenses/:id' => 'expense#update'
     delete '/expenses/:id' => 'expenses#destroy'
 
 
