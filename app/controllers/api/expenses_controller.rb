@@ -10,7 +10,7 @@ class Api::ExpensesController < ApplicationController
       name: params[:name],
       date: params[:date],
       amount: params[:amount],
-      type: params[:type],
+      expense_type: params[:expense_type],
       notes: params[:notes]
       )
     if expense.save
