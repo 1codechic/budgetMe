@@ -7,4 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Expense.create!(name: 'car payment', date: 'april 22, 2019', amount: '320', expense_type: 'expense', notes: 'added via seed file')
+# Expense.create!(name: 'car payment', date: 'april 22, 2019', amount: '320', expense_type: 'expense', notes: 'added via seed file')
+
+cat1 = Category.create(name: 'Mortgage/Rent')
+cat2 = Category.create(name: 'Utilities')
+cat3 = Category.create(name: 'Restuarant')
+cat4 = Category.create(name: 'Vacation')
+cat5 = Category.create(name: 'Transportation')
+
