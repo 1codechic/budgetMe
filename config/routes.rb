@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     get '/users/:id' => 'users#show'
     delete '/users/:id' => 'users#destroy'
 
+    post "/sessions" => "sessions#create"
+
     get '/categories' => 'categories#index'
     post '/categories' => 'categories#create'
     get '/categories/:id' => 'categories#show'
