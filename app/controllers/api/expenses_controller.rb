@@ -6,14 +6,14 @@ class Api::ExpensesController < ApplicationController
   end
 
   def create
-    expense = Expense.new(
+    @expense = Expense.new(
       name: params[:name],
       date: params[:date],
       amount: params[:amount],
       expense_type: params[:expense_type],
       notes: params[:notes]
       )
-    if expense.save
+    if @expense.save
       render json: {message: 'expense created successfully'}, status: :created
     else
       render json: {errors: expense.errors.full_message}, status: :bad_request
