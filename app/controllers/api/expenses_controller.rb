@@ -9,7 +9,7 @@ class Api::ExpensesController < ApplicationController
     @expense = Expense.new(
       name: params[:name],
       date: params[:date],
-      amount: sprintf("%2.2f", params[:amount])
+      amount: sprintf("%2.2f", params[:amount]),
       category_id: params[:category_id],
       notes: params[:notes]
       )
